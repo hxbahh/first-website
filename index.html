@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body class="bg-[#fce8df] mx-auto">
+    <section
+      id="modal"
+      class="fixed inset-0 z-50 flex flex-col justify-center items-center bg-black/50 backdrop-blur-sm hidden"
+    >
+      <img
+        src="assets/bububu.jpeg"
+        class="object-cover w-52 h-64 mx-auto rounded-lg shadow-md"
+        alt="Profile Image"
+      />
+
+      <strong class="text-white italic mt-4">Hiba Firoz KP</strong>
+      <strong class="text-white italic mx-auto">Email: hxba@gmail.com</strong>
+
+      <button
+        class="mt-4 px-4 py-2 bg-[#a9746e] hover:bg-[#925c58] text-white font-bold rounded"
+      >
+        Log Out
+      </button>
+      <button
+        id="closeModal"
+        class="mt-4 px-4 py-2 bg-[#a9746e] hover:bg-[#925c58] text-white font-bold rounded"
+      >
+        close
+      </button>
+    </section>
+
+    <header class="flex flex-col md:flex-row justify-between items-center bg-[#a9746e] p-6 md:p-10 gap-4 md:gap-0">
+      <div class="w-40 pt-5">
+
+  <div class="text-center my-0 w-46">
+  <h1 class="text-4xl font-bold bg-gradient-to-r from-pink-500 via-fuchsia-500 to-purple-600 text-transparent bg-clip-text tracking-widest font-serif">
+    C<span class="text-white font-sans">'</span>ENCIA
+  </h1>
+</div>
+
+
+
+
+      </div>
+      <nav id="nav-links" class="hidden md:flex flex-col md:flex-row gap-4 md:gap-6 mt-4 md:mt-0 text-black text-lg">
+        <div>
+          <a href="#about"
+            ><button class="hover:bg-[#855347] hover:text-white rounded-lg p-3">
+              About
+            </button></a
+          >
+        </div>
+        <div>
+          <a href="#service"
+            ><button class="hover:bg-[#855347] hover:text-white rounded-lg p-3">
+              Services
+            </button></a
+          >
+        </div>
+        <div>
+          <a href="#feature"
+            ><button class="hover:bg-[#855347] hover:text-white rounded-lg p-3">
+              Features
+            </button></a
+          >
+        </div>
+        <div>
+          <a href="#contact"
+            ><button class="hover:bg-[#855347] hover:text-white rounded-lg p-3">
+              Contact Us
+            </button></a
+          >
+        </div>
+        <div>
+          <button id="profile" class="p-3">
+            <i class="fa-solid fa-user"></i>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <script>
+      const profile = document.getElementById("profile");
+      const modal = document.getElementById("modal");
+      const closeModal = document.getElementById("closeModal");
+      profile.addEventListener("click", () => {
+        modal.classList.remove("hidden");
+      });
+
+      closeModal.addEventListener("click", () => {
+        modal.classList.add("hidden");
+      });
+      modal.addEventListener('click',(e)=>{
+        modal.classList.add('hidden')
+      }
+    )
+
+    </script>
+
+    <!-- heroSection -->
+    <section>
+      <div class="flex flex-col md:flex-row items-center bg-gradient-to-b from-[#a9746e] via-[#d8b4a0] to-[#fce8df]">
+        <div class="text-white text-center md:text-left flex-1 text-3xl md:text-5xl font-bold p-6">
+          <h1 class="pt-0 text-white -mt-2">REVEAL YOUR RADIANCE.</h1>
+          <h2 class="text-pink-500">THE C'ENCIA WAY"</h2>
+          <h3 class="text-lg mt-2 italic text-pink-500">
+            Flawless begins here.
+          </h3>
+          <h3 class="text-lg italic font-light text-pink-500">
+            Cosmetics that make you feel unstoppable.
+          </h3>
+        </div>
+       <div class="flex-1 flex justify-center p-4">
+          <video
+            src="assets/videoo.mp4"
+            autoplay
+            loop
+            muted
+            class="object-cover mx-auto rounded-lg shadow-md"
+          ></video>
+        </div>
+      </div>
+      <div class="text-center pt-9">
+        <button
+          id="faq"
+          class="text-[#a9746e] rounded-lg p-2 hover:bg-[#d8b4a0] hover:text-white text-lg"
+        >
+          Is Makeup safe for daily use?
+        </button>
+        <p id="answer" class="hidden text-[#d8b4a0] text-xl italic">
+          Absolutely! Our products aredermatologically tested and safe for all
+          skin types.
+        </p>
+      </div>
+    </section>
+
+    <script>
+      const faq = document.getElementById("faq");
+      const answer = document.getElementById("answer");
+      faq.addEventListener("click", () => {
+        answer.classList.toggle("hidden");
+      });
+    </script>
+
+<!-- About Section -->
+    <section class="p-10 m-10 bg-[#BF9183] rounded-3xl" id="about">
+      <h1 class="font-bold text-3xl text-white">About Us</h1>
+      <div class="mt-9 text-white">
+        <p class="text-xl font-light">
+          Welcome to <strong>C'ENCIA</strong>, where timeless elegance meets
+          modern beauty. Our philosophy is simple: true luxury is not just about
+          appearance — it’s about how you feel in your skin.
+        </p>
+        <p class="text-xl font-light">
+          Born from a passion for purity and perfection, Glow Essence was
+          created to elevate everyday beauty into an experience of indulgence.
+          We blend cutting-edge cosmetic science with carefully selected natural
+          ingredients to deliver results that are both visible and lasting.
+        </p>
+        <p class="text-xl font-light">
+          Each product is a statement — a reflection of our commitment to
+          excellence, ethics, and elegance. We believe that beauty should never
+          come at the cost of well-being, which is why all our formulations are
+          cruelty-free, dermatologically tested, and free from harsh chemicals.
+        </p>
+        <p class="text-xl font-light">
+          Our packaging speaks of sophistication, but what’s inside is even more
+          powerful: skincare-infused cosmetics designed to nourish, protect, and
+          illuminate your skin.
+        </p>
+        <p class="text-xl font-light">
+          Whether you’re preparing for a moment in the spotlight or enjoying a
+          quiet self-care ritual, Glow Essence helps you embrace your inner
+          light with confidence and grace.
+        </p>
+        <p class="text-xl font-light">
+          Because you deserve beauty that’s as refined, radiant, and resilient
+          as you are.
+        </p>
+      </div>
+    </section>
+ 
+<!-- Service Section  -->
+    <section
+      class="p-10 bg-[#BF9183] text-white rounded-3xl m-10 mt-20 pb-2"
+      id="service"
+    >
+      <h1 class="text-4xl font-bold text-center mt-1">Services</h1>
+      <br />
+      <h2 class="font-light text-xl">
+        At Glow Essence Cosmetics, we go beyond offering exceptional products —
+        we provide personalized, luxurious services designed to enhance your
+        beauty journey. Whether you're looking for expert guidance, unique
+        experiences, or exclusive rewards, our services are crafted with care to
+        meet your every need.
+      </h2>
+      <br />
+      <h1 class="text-2xl">Our Services</h1>
+      <div class="p-5">
+        <ul class="list-disc text-lg">
+          <li>
+            <button
+              class="text-white hover:bg-[#855347] hover:text-black"
+              onclick="alert('You have clicked FREE BEAUTY CONSULTATION')"
+            >
+              <strong>Free Beauty Consultations</strong>
+            </button>
+            <br />Personalized skincare and makeup guidance.
+          </li>
+          <br />
+          <li>
+            <button
+              class="text-white hover:bg-[#855347] hover:text-black"
+              onclick="alert('You have clicked VIRTUAL MAKEUP TUTORIALS')"
+            >
+              <strong>Virtual Makeup Tutorials</strong></button
+            ><br />Learn looks with live and video classes.
+          </li>
+          <br />
+          <li>
+            <button
+              class="text-white hover:bg-[#855347] hover:text-black"
+              onclick="alert('You have clicked PERSONALIZED PRODUCT MATCHING')"
+            >
+              <strong>Personalized Product Matching</strong>
+            </button>
+            <br />Smart recommendations for your skin type.
+          </li>
+          <br />
+          <li>
+            <button
+              class="text-white hover:bg-[#855347] hover:text-black"
+              onclick="alert('You have clicked GIFT WRAPPING & CUSTOM KITS')"
+            >
+              <strong>Gift Wrapping & Custom Kits</strong></button
+            ><br />Elegant packaging for any occasion.
+          </li>
+          <br />
+          <li>
+            <button
+              class="text-white hover:bg-[#855347] hover:text-black"
+              onclick="alert('You have clicked FAST AND SECURE DELIVERY')"
+            >
+              <strong>Fast & Secure Delivery</strong>
+            </button>
+            <br />Quick, beautiful, and safe product delivery.
+          </li>
+          <br />
+        </ul>
+      </div>
+    </section>
+
+<!-- contact form -->
+    <section id="contact" class="mb-10">
+      <h1 class="text-center text-2xl font-bold mb-6">Contact Us</h1>
+      <form
+        id="form"
+        class="bg-[#d8b4a0] text-left w-96 mx-auto p-6 rounded-lg shadow-lg space-y-4"
+      >
+        <div>
+          <label for="firstName" class="block font-semibold">Firstname:</label>
+          <input
+            type="text"
+            id="firstName"
+            placeholder="Enter your First name"
+            class="w-full rounded-lg p-2 border-2 border-[#855347]"
+          />
+          <p id="firstnameError" class="hidden text-red-600 text-sm mt-1">
+            First name is Required
+          </p>
+        </div>
+
+        <div>
+          <label for="lastName" class="block font-semibold">Lastname:</label>
+          <input
+            type="text"
+            id="lastName"
+            placeholder="Enter your Second name"
+            class="w-full rounded-lg p-2 border-2 border-[#855347]"
+          />
+          <p id="lastnameError" class="hidden text-red-600 text-sm mt-1">
+            Last name is Required
+          </p>
+        </div>
+
+        <div>
+          <label for="number" class="block font-semibold">Phone:</label>
+          <input
+            type="text"
+            id="number"
+            placeholder="Enter your Phone number"
+            class="w-full rounded-lg p-2 border-2 border-[#855347]"
+          />
+          <p id="numberError" class="hidden text-red-600 text-sm mt-1">
+            Phone number is Required
+          </p>
+        </div>
+
+        <div>
+          <label for="email" class="block font-semibold">Email ID:</label>
+          <input
+            type="email"
+            id="email"
+            placeholder="Enter your Email"
+            class="w-full rounded-lg p-2 border-2 border-[#855347]"
+          />
+          <p id="emailError" class="hidden text-red-600 text-sm mt-1">
+            Please enter your Email
+          </p>
+        </div>
+
+        <div>
+          <label for="msg" class="block font-semibold">Message:</label>
+          <textarea
+            name="message"
+            id="msg"
+            placeholder="Your message..."
+            class="w-full rounded-lg p-2 border-2 border-[#855347]"
+          ></textarea>
+          <p id="livePreview" class="text-sm pt-1 pb-1 text-gray-700">
+            Live message appear here...
+          </p>
+        </div>
+
+        <div id="msgSending" class="hidden italic text-blue-600"></div>
+
+        <div class="text-center">
+          <button
+            id="submitt"
+            type="submit"
+            class="hover:bg-[#855347] hover:text-white p-3 bg-[#fce8df] rounded-lg font-semibold"
+          >
+            Submit
+          </button>
+        </div>
+      </form>
+    </section>
+
+    <script>
+      const form = document.getElementById("form");
+      const firstName = document.getElementById("firstName");
+      const firstnameError = document.getElementById("firstnameError");
+      const lastName = document.getElementById("lastName");
+      const lastnameError = document.getElementById("lastnameError");
+      const number = document.getElementById("number");
+      const numberError = document.getElementById("numberError");
+      const email = document.getElementById("email");
+      const emailError = document.getElementById("emailError");
+      const message = document.getElementById("msg");
+      const livePreview = document.getElementById("livePreview");
+      const msgSending = document.getElementById("msgSending");
+
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        let isValid=true;
+        if (firstName.value.trim() === "") {
+          firstnameError.classList.remove("hidden");
+          firstnameError.classList.add("text-red-500");
+          firstName.classList.add("border-2", "border-red-500");
+          isValid=false
+        }
+        if (lastName.value.trim() === "") {
+          lastnameError.classList.remove("hidden");
+          lastnameError.classList.add("text-red-500");
+          lastName.classList.add("border-2", "border-red-500");
+          isValid=false
+        }
+
+        if (number.value.trim() === "") {
+          numberError.classList.remove("hidden");
+          numberError.classList.add("text-red-500");
+          number.classList.add("border-2", "border-red-500");
+          isValid=false
+        }
+
+        if (email.value.trim() === "") {
+          emailError.classList.remove("hidden");
+          emailError.classList.add("text-red-500");
+          email.classList.add("border-2", "border-red-500");
+          isValid=false
+        }
+        if (isValid && message.value.trim() !== "") {
+          msgSending.classList.remove("hidden");
+          msgSending.textContent = "sending...";
+          setTimeout(() => {
+           alert(msgSending.textContent='message sent Successfully')
+          }, 2000);
+        }
+      });
+
+      message.addEventListener("input", (e) => {
+        livePreview.textContent = message.value;
+      });
+    </script>
+
+ <!-- feature section    -->
+    <section id="feature" class="py-10">
+  <div class="max-w-6xl mx-auto px-4">
+    <h2 class="text-3xl font-bold text-center text-[#a9746e] mb-8">Features</h2>
+    <div class="grid gap-6 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+      <div class="bg-white border-1 p-6 rounded-lg shadow-md text-center">
+        <h3 class="text-xl font-semibold text-[#a9746e] mb-2">Natural Ingredients</h3>
+        <p class="text-gray-700">Our products are made from 100% natural and organic ingredients for healthy, glowing skin.</p>
+      </div>
+      <div class="bg-white border-1 p-6 rounded-lg shadow-md text-center">
+        <h3 class="text-xl font-semibold text-[#a9746e] mb-2">Cruelty-Free</h3>
+        <p class="text-gray-700">We never test on animals. Our brand stands for compassion and care.</p>
+      </div>
+      <div class="bg-white border-1 p-6 rounded-lg shadow-md text-center">
+        <h3 class="text-xl font-semibold text-[#a9746e] mb-2">Dermatologist Tested</h3>
+        <p class="text-gray-700">All products are tested and approved by certified dermatologists for your safety.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- footer -->
+    <footer class="bg-[#855347] mt-19">
+      <div class="text-center">
+        <p class="text-sm py-6">© 2025 Cencia Cosmetics. All rights reserved.</p>
+        <div class="flex justify-between">
+          <div class=" "></div>
+          <div class=""></div>
+          <div class=" "></div>
+        </div>
+      </div>
+      <section class="flex flex-wrap flex-col md:flex-row justify-between p-4 text-white">
+
+        <div class="flex-1">
+          <p>Delivery information</p>
+          <p>International shipping</p>
+          <p>Payment options</p>
+          <p>Track your order</p>
+          <p>Returns</p>
+          <p>Find a store</p>
+        </div>
+        <div class="flex-1">
+          <div><h2>Information</h2></div>
+          <p>Blog</p>
+          <p>Offers & contest details</p>
+          <p>Help & FAQS</p>
+          <p>About Tanishq</p>
+        </div>
+        <div class="flex-1">
+          <h2>Contact us</h2>
+          <p>1800-266-0123</p>
+          <h2>Chat with us</h2>
+          <p>+918737382721</p>
+        </div>
+      </section>
+    </footer>
+  </body>
+</html>
